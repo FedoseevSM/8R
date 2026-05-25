@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
-    <title>8R - BANGKOK MIXTAPE | Промо</title>
-    <!-- Шрифты как у Spotify: Circular, но используем похожие системные -->
+    <title>8R - Buddhahood | Промо микстейпа</title>
+    <!-- Шрифты как у Spotify: используем Inter + иконки -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600;14..32,700;14..32,800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <style>
@@ -28,7 +28,7 @@
             margin: 0 auto;
         }
 
-        /* Hero-блок с обложкой и инфо как в плеере Spotify */
+        /* Hero-блок с обложкой */
         .mixtape-header {
             display: flex;
             flex-wrap: wrap;
@@ -42,12 +42,12 @@
             border: 1px solid rgba(255, 255, 255, 0.05);
         }
 
-        /* Обложка — отдельный акцент */
+        /* Обложка — отдельный акцент, в стиле духовной эстетики буддизма */
         .cover-art {
             flex-shrink: 0;
             width: 260px;
             height: 260px;
-            background: radial-gradient(circle at 30% 20%, #1f2f2a, #091009);
+            background: radial-gradient(circle at 30% 20%, #2a241f, #0e0c0a);
             border-radius: 1.5rem;
             box-shadow: 0 20px 35px -8px black;
             display: flex;
@@ -68,7 +68,7 @@
         .cover-glow {
             position: absolute;
             inset: 0;
-            background: radial-gradient(ellipse at 30% 40%, rgba(0, 255, 200, 0.15), transparent 70%);
+            background: radial-gradient(ellipse at 30% 40%, rgba(255, 193, 69, 0.15), transparent 70%);
             pointer-events: none;
         }
 
@@ -88,13 +88,13 @@
             border-radius: 30px;
             display: inline-block;
             margin-bottom: 1rem;
-            color: #1ed760;
+            color: #ffc745;
         }
 
         .cover-title {
-            font-size: 3rem;
+            font-size: 2.8rem;
             font-weight: 800;
-            background: linear-gradient(135deg, #ffffff, #aaffdd);
+            background: linear-gradient(135deg, #ffd966, #ffb347);
             -webkit-background-clip: text;
             background-clip: text;
             color: transparent;
@@ -103,10 +103,10 @@
         }
 
         .cover-artist {
-            font-size: 1.3rem;
+            font-size: 1.2rem;
             font-weight: 600;
             margin-top: 0.5rem;
-            color: #d4d4d4;
+            color: #e0cba0;
         }
 
         .cover-badge {
@@ -115,7 +115,7 @@
             background: #1f1f1f;
             padding: 0.3rem 1rem;
             border-radius: 30px;
-            color: #1ed760;
+            color: #ffc745;
             font-weight: 500;
         }
 
@@ -132,16 +132,20 @@
             font-weight: 600;
             text-transform: uppercase;
             letter-spacing: 2px;
-            color: #1ed760;
+            color: #ffc745;
             margin-bottom: 0.75rem;
         }
 
         .mixtape-name {
-            font-size: 3.2rem;
+            font-size: 3.5rem;
             font-weight: 800;
             letter-spacing: -0.02em;
             line-height: 1.2;
             margin-bottom: 0.5rem;
+            background: linear-gradient(135deg, #ffffff, #ffd966);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
         }
 
         .artist-name {
@@ -156,16 +160,16 @@
         }
 
         .verified {
-            background: #1ed760;
-            color: black;
+            background: #ffc745;
+            color: #0a0a0a;
             font-size: 0.7rem;
-            padding: 2px 6px;
+            padding: 2px 8px;
             border-radius: 30px;
             font-weight: 700;
         }
 
         .desc {
-            color: #b0b0b0;
+            color: #c0c0c0;
             line-height: 1.5;
             max-width: 90%;
             margin: 0.5rem 0 1rem;
@@ -195,7 +199,7 @@
         }
 
         .section-title i {
-            color: #1ed760;
+            color: #ffc745;
             font-size: 1.8rem;
         }
 
@@ -208,7 +212,7 @@
             box-shadow: 0 12px 25px -8px rgba(0, 0, 0, 0.5);
         }
 
-        /* Каждый трек — карточка-строка как в Spotify (современный, с ховером) */
+        /* Каждый трек — карточка-строка как в Spotify */
         .track-item {
             display: flex;
             align-items: center;
@@ -223,7 +227,6 @@
             background: rgba(255, 255, 255, 0.08);
         }
 
-        /* Левая часть: номер + название + дополнительная инфа */
         .track-left {
             display: flex;
             align-items: center;
@@ -246,19 +249,19 @@
         }
 
         .track-title {
-            font-weight: 700;
-            font-size: 1.05rem;
+            font-weight: 800;
+            font-size: 1.1rem;
             letter-spacing: -0.2px;
-            color: #f0f0f0;
+            color: #f5f5f5;
         }
 
         .track-artist {
             font-size: 0.8rem;
-            color: #a0a0a0;
+            color: #b0a07c;
             margin-top: 2px;
+            font-weight: 500;
         }
 
-        /* правая часть: длительность/кнопка */
         .track-meta {
             display: flex;
             align-items: center;
@@ -281,17 +284,17 @@
         }
 
         .play-icon:hover {
-            color: #1ed760;
+            color: #ffc745;
             transform: scale(1.1);
         }
 
-        /* особый стиль для фита или главного трека — необязательно, но добавим изюминку */
+        /* особый акцент на некоторых треках */
         .featured-highlight {
-            background: linear-gradient(90deg, rgba(30,215,96,0.1), transparent);
-            border-left: 3px solid #1ed760;
+            background: linear-gradient(90deg, rgba(255,199,69,0.08), transparent);
+            border-left: 3px solid #ffc745;
         }
 
-        /* Подвал с CTA */
+        /* подвал с действиями */
         .footer-cta {
             margin-top: 3rem;
             text-align: center;
@@ -304,14 +307,14 @@
         }
 
         .btn {
-            background: #1ed760;
+            background: #ffc745;
             border: none;
             padding: 0.8rem 2rem;
             border-radius: 2rem;
             font-weight: 700;
             font-family: inherit;
             font-size: 0.9rem;
-            color: #000;
+            color: #0a0a0a;
             cursor: pointer;
             transition: 0.2s;
             display: inline-flex;
@@ -326,17 +329,16 @@
         }
 
         .btn-outline:hover {
-            border-color: #1ed760;
-            color: #1ed760;
+            border-color: #ffc745;
+            color: #ffc745;
         }
 
         .btn:hover {
             transform: scale(1.02);
-            background: #1fdf64;
-            box-shadow: 0 8px 20px rgba(30,215,96,0.3);
+            background: #ffd05c;
+            box-shadow: 0 8px 20px rgba(255,199,69,0.3);
         }
 
-        /* адаптивность */
         @media (max-width: 700px) {
             body {
                 padding: 1rem;
@@ -366,7 +368,7 @@
                 font-size: 0.95rem;
             }
             .mixtape-name {
-                font-size: 2.2rem;
+                font-size: 2.6rem;
             }
             .cover-art {
                 width: 220px;
@@ -374,7 +376,6 @@
             }
         }
 
-        /* кастомный скролл */
         ::-webkit-scrollbar {
             width: 6px;
         }
@@ -389,67 +390,66 @@
 </head>
 <body>
 <div class="container">
-    <!-- Обложка и главная информация -->
+    <!-- ОБЛОЖКА + ИНФО: Buddhahood, исполнитель 8R -->
     <div class="mixtape-header">
         <div class="cover-art">
             <div class="cover-glow"></div>
             <div class="cover-text">
                 <span class="mixtape-label">MIXTAPE</span>
-                <div class="cover-title">ASOK</div>
-                <div class="cover-artist">8R · RAF · SPA</div>
-                <div class="cover-badge"><i class="fas fa-headphones"></i> BANGKOK EDITION</div>
+                <div class="cover-title">Buddhahood</div>
+                <div class="cover-artist">8R</div>
+                <div class="cover-badge"><i class="fas fa-om"></i> PATH OF DHARMA</div>
             </div>
         </div>
         <div class="mixtape-info">
-            <div class="pre-title"><i class="fas fa-microphone-alt"></i> ПРЕМЬЕРА 2025</div>
-            <h1 class="mixtape-name">BANGKOK<br>NIGHTS MIXTAPE</h1>
+            <div class="pre-title"><i class="fas fa-dharmachakra"></i> ОФИЦИАЛЬНЫЙ РЕЛИЗ</div>
+            <h1 class="mixtape-name">Buddhahood</h1>
             <div class="artist-name">
-                <span>8R, RAF, SPA</span>
+                <span>8R</span>
                 <span class="verified"><i class="fas fa-check-circle"></i> verified</span>
             </div>
             <div class="desc">
-                Атмосферный микстейп на стыке дрилл, трэпа и глубоких басов. 9 треков, 
-                вдохновлённых ночным Бангкоком, 7/11 и кондо-эстетикой. Погружение в сырой урбанистический звук.
+                «Buddhahood» — духовный и урбанистический микстейп от 8R. Восемь треков, пропитанных атмосферой восточных мотивов, 
+                уличной энергии и дзен-саунда. От RAF до Veed — каждый трек — ступень просветления.
             </div>
             <div class="meta-stats">
-                <span><i class="far fa-clock"></i> 32 мин · 2025</span>
-                <span><i class="fas fa-tag"></i> 8R · RAF · SPA · Kratom</span>
-                <span><i class="fas fa-waveform"></i> Эксклюзив</span>
+                <span><i class="far fa-clock"></i> 27 мин · 2025</span>
+                <span><i class="fas fa-tag"></i> 8R · единственный исполнитель</span>
+                <span><i class="fas fa-waveform"></i> Эксклюзивное промо</span>
             </div>
         </div>
     </div>
 
-    <!-- Список треков: все треки из условия + 1 для полноты (Kratom уже есть, добавим как трек 5) 
-         Исполнитель 8R, RAF, SPA, Kratom, ATM, 7/11, Asok, Condo, Veed — ровно 9 треков. 
-         Сделаем каждый трек явно выделенным с номером, названием, артистом и фиктивной длительностью -->
+    <!-- СПИСОК ТРЕКОВ: все треки как названия (RAF, SPA, Kratom, ATM, 7/11, Asok, Condo, Veed) 
+         Исполнитель везде только 8R. Плюс выдержан стиль -->
     <div class="tracks-section">
         <div class="section-title">
             <i class="fas fa-list-ul"></i> 
-            <span>Треки микстейпа</span>
-            <span style="font-size: 0.9rem; background: #2a2a2a; padding: 0.2rem 0.7rem; border-radius: 40px;">9 дорожек</span>
+            <span>Дорожки к просветлению</span>
+            <span style="font-size: 0.9rem; background: #2a2a2a; padding: 0.2rem 0.7rem; border-radius: 40px;">8 треков</span>
         </div>
         <div class="tracklist">
-            <!-- трек 1: 8R (исполнитель 8R) -->
-            <div class="track-item">
+            <!-- трек 1: RAF -->
+            <div class="track-item featured-highlight">
                 <div class="track-left">
                     <div class="track-number">01</div>
                     <div class="track-info">
-                        <div class="track-title">KRATOM SUNSET</div>
-                        <div class="track-artist">8R · RAF</div>
+                        <div class="track-title">RAF</div>
+                        <div class="track-artist">8R</div>
                     </div>
                 </div>
                 <div class="track-meta">
-                    <div class="track-duration">3:24</div>
+                    <div class="track-duration">3:22</div>
                     <div class="play-icon"><i class="fas fa-play-circle"></i></div>
                 </div>
             </div>
-            <!-- трек 2: RAF -->
+            <!-- трек 2: SPA -->
             <div class="track-item">
                 <div class="track-left">
                     <div class="track-number">02</div>
                     <div class="track-info">
-                        <div class="track-title">NIGHT RIDER</div>
-                        <div class="track-artist">RAF · SPA</div>
+                        <div class="track-title">SPA</div>
+                        <div class="track-artist">8R</div>
                     </div>
                 </div>
                 <div class="track-meta">
@@ -457,27 +457,13 @@
                     <div class="play-icon"><i class="fas fa-play-circle"></i></div>
                 </div>
             </div>
-            <!-- трек 3: SPA -->
+            <!-- трек 3: Kratom -->
             <div class="track-item">
                 <div class="track-left">
                     <div class="track-number">03</div>
                     <div class="track-info">
-                        <div class="track-title">BANGKOK MASSAGE</div>
-                        <div class="track-artist">SPA · 8R</div>
-                    </div>
-                </div>
-                <div class="track-meta">
-                    <div class="track-duration">3:10</div>
-                    <div class="play-icon"><i class="fas fa-play-circle"></i></div>
-                </div>
-            </div>
-            <!-- трек 4: Kratom -->
-            <div class="track-item featured-highlight">
-                <div class="track-left">
-                    <div class="track-number">04</div>
-                    <div class="track-info">
-                        <div class="track-title">KRATOM DREAMS</div>
-                        <div class="track-artist">Kratom · RAF</div>
+                        <div class="track-title">Kratom</div>
+                        <div class="track-artist">8R</div>
                     </div>
                 </div>
                 <div class="track-meta">
@@ -485,13 +471,13 @@
                     <div class="play-icon"><i class="fas fa-play-circle"></i></div>
                 </div>
             </div>
-            <!-- трек 5: ATM -->
+            <!-- трек 4: ATM -->
             <div class="track-item">
                 <div class="track-left">
-                    <div class="track-number">05</div>
+                    <div class="track-number">04</div>
                     <div class="track-info">
-                        <div class="track-title">ATM FLOW</div>
-                        <div class="track-artist">ATM · 8R</div>
+                        <div class="track-title">ATM</div>
+                        <div class="track-artist">8R</div>
                     </div>
                 </div>
                 <div class="track-meta">
@@ -499,13 +485,13 @@
                     <div class="play-icon"><i class="fas fa-play-circle"></i></div>
                 </div>
             </div>
-            <!-- трек 6: 7/11 -->
-            <div class="track-item">
+            <!-- трек 5: 7/11 -->
+            <div class="track-item featured-highlight">
                 <div class="track-left">
-                    <div class="track-number">06</div>
+                    <div class="track-number">05</div>
                     <div class="track-info">
-                        <div class="track-title">7/11 AFTER MIDNIGHT</div>
-                        <div class="track-artist">7/11 · SPA</div>
+                        <div class="track-title">7/11</div>
+                        <div class="track-artist">8R</div>
                     </div>
                 </div>
                 <div class="track-meta">
@@ -513,13 +499,13 @@
                     <div class="play-icon"><i class="fas fa-play-circle"></i></div>
                 </div>
             </div>
-            <!-- трек 7: Asok (центральный трек) -->
-            <div class="track-item featured-highlight">
+            <!-- трек 6: Asok -->
+            <div class="track-item">
                 <div class="track-left">
-                    <div class="track-number">07</div>
+                    <div class="track-number">06</div>
                     <div class="track-info">
-                        <div class="track-title">ASOK STATION</div>
-                        <div class="track-artist">Asok · 8R · RAF</div>
+                        <div class="track-title">Asok</div>
+                        <div class="track-artist">8R</div>
                     </div>
                 </div>
                 <div class="track-meta">
@@ -527,13 +513,13 @@
                     <div class="play-icon"><i class="fas fa-play-circle"></i></div>
                 </div>
             </div>
-            <!-- трек 8: Condo -->
+            <!-- трек 7: Condo -->
             <div class="track-item">
                 <div class="track-left">
-                    <div class="track-number">08</div>
+                    <div class="track-number">07</div>
                     <div class="track-info">
-                        <div class="track-title">CONDO VIBES</div>
-                        <div class="track-artist">Condo · Veed</div>
+                        <div class="track-title">Condo</div>
+                        <div class="track-artist">8R</div>
                     </div>
                 </div>
                 <div class="track-meta">
@@ -541,13 +527,13 @@
                     <div class="play-icon"><i class="fas fa-play-circle"></i></div>
                 </div>
             </div>
-            <!-- трек 9: Veed -->
+            <!-- трек 8: Veed -->
             <div class="track-item">
                 <div class="track-left">
-                    <div class="track-number">09</div>
+                    <div class="track-number">08</div>
                     <div class="track-info">
-                        <div class="track-title">VEED IN THE NIGHT</div>
-                        <div class="track-artist">Veed · ATM</div>
+                        <div class="track-title">Veed</div>
+                        <div class="track-artist">8R</div>
                     </div>
                 </div>
                 <div class="track-meta">
@@ -558,91 +544,84 @@
         </div>
     </div>
 
-    <!-- мини-плеер не функциональный, но добавляет интерактива с помощью alert (имитация) -->
+    <!-- панель действий (имитация Spotify) -->
     <div class="footer-cta">
-        <button class="btn" id="playAllBtn"><i class="fas fa-play"></i> Слушать весь микстейп</button>
-        <button class="btn btn-outline" id="saveBtn"><i class="far fa-heart"></i> Сохранить в медиатеку</button>
+        <button class="btn" id="playAllBtn"><i class="fas fa-play"></i> Слушать Buddhahood</button>
+        <button class="btn btn-outline" id="saveBtn"><i class="far fa-heart"></i> Сохранить в плейлист</button>
         <button class="btn btn-outline" id="shareBtn"><i class="fas fa-share-alt"></i> Поделиться</button>
     </div>
     <div style="text-align: center; margin-top: 2rem; font-size: 0.75rem; opacity: 0.5;">
-        <i class="fas fa-headphones"></i> 8R · RAF · SPA · Kratom · ATM · 7/11 · Asok · Condo · Veed | BANGKOK MIXTAPE 2025
+        <i class="fas fa-headphones"></i> 8R — Buddhahood | Все треки: RAF · SPA · Kratom · ATM · 7/11 · Asok · Condo · Veed
     </div>
 </div>
 
 <script>
-    // простая имитация плеера: по клику на иконку плей, либо кнопку "слушать весь микстейп"
-    // создадим эффект, что трек выбран. Полноценный аудиоплеер не требуется, но задание чисто промо, добавим уведомления.
+    // интерактив: имитация воспроизведения треков, современные тосты
     const playIcons = document.querySelectorAll('.play-icon');
     const trackItems = document.querySelectorAll('.track-item');
     
-    // функция для показа уведомления в стиле Spotify (ненавязчивый тост)
     function showToast(message, type = 'info') {
-        // создаем временный тост
         const toast = document.createElement('div');
         toast.innerText = message;
         toast.style.position = 'fixed';
-        toast.style.bottom = '24px';
+        toast.style.bottom = '28px';
         toast.style.left = '50%';
         toast.style.transform = 'translateX(-50%)';
-        toast.style.backgroundColor = type === 'success' ? '#1ed760' : '#2e2e2e';
+        toast.style.backgroundColor = type === 'success' ? '#ffc745' : '#2e2e2e';
         toast.style.color = type === 'success' ? '#000' : '#fff';
-        toast.style.padding = '12px 24px';
+        toast.style.padding = '12px 26px';
         toast.style.borderRadius = '40px';
-        toast.style.fontWeight = '500';
+        toast.style.fontWeight = '600';
         toast.style.fontSize = '0.9rem';
         toast.style.zIndex = '9999';
-        toast.style.backdropFilter = 'blur(10px)';
-        toast.style.boxShadow = '0 10px 20px rgba(0,0,0,0.3)';
+        toast.style.backdropFilter = 'blur(8px)';
+        toast.style.boxShadow = '0 8px 24px rgba(0,0,0,0.4)';
         toast.style.fontFamily = 'inherit';
-        toast.style.letterSpacing = '0.3px';
+        toast.style.letterSpacing = '0.2px';
         document.body.appendChild(toast);
         setTimeout(() => {
             toast.style.opacity = '0';
             setTimeout(() => toast.remove(), 400);
-        }, 2200);
+        }, 2100);
     }
 
-    // обработчик для каждого трека (плей)
-    playIcons.forEach((icon, idx) => {
+    // клик по иконке play каждого трека
+    playIcons.forEach((icon) => {
         icon.addEventListener('click', (e) => {
             e.stopPropagation();
             const trackDiv = icon.closest('.track-item');
             const titleElem = trackDiv.querySelector('.track-title');
-            const artistElem = trackDiv.querySelector('.track-artist');
             const trackName = titleElem ? titleElem.innerText : 'трек';
-            const artistName = artistElem ? artistElem.innerText : '';
-            showToast(`Сейчас играет: ${trackName} — ${artistName}`, 'success');
-            // дополнительный визуальный фидбек — подсветка
-            trackDiv.style.transition = '0.1s';
-            trackDiv.style.backgroundColor = 'rgba(30,215,96,0.2)';
+            showToast(`▶ Сейчас играет: ${trackName} — 8R`, 'success');
+            trackDiv.style.transition = 'background 0.2s';
+            trackDiv.style.backgroundColor = 'rgba(255,199,69,0.2)';
             setTimeout(() => {
                 trackDiv.style.backgroundColor = '';
-            }, 400);
+            }, 500);
         });
     });
 
-    // кнопка "слушать весь микстейп"
+    // кнопка "Слушать Buddhahood"
     const playAllBtn = document.getElementById('playAllBtn');
     if (playAllBtn) {
         playAllBtn.addEventListener('click', () => {
-            showToast('🎧 BANGKOK NIGHTS MIXTAPE — начато воспроизведение всех треков (демо)', 'success');
-            // дополнительная анимация на треклисте
-            trackItems.forEach((item, i) => {
+            showToast('🎧 Начинается восхождение — микстейп "Buddhahood" (8R)', 'success');
+            trackItems.forEach((item, idx) => {
                 setTimeout(() => {
-                    item.style.backgroundColor = 'rgba(30,215,96,0.15)';
+                    item.style.backgroundColor = 'rgba(255,199,69,0.2)';
                     setTimeout(() => {
                         item.style.backgroundColor = '';
                     }, 600);
-                }, i * 200);
+                }, idx * 180);
             });
         });
     }
 
-    // кнопка "сохранить" — имитация
+    // кнопка сохранить
     const saveBtn = document.getElementById('saveBtn');
     if (saveBtn) {
         saveBtn.addEventListener('click', () => {
-            showToast('➕ Микстейп добавлен в Вашу медиатеку', 'success');
+            showToast('➕ "Buddhahood" добавлен в Вашу медиатеку', 'success');
         });
     }
 
@@ -652,42 +631,40 @@
         shareBtn.addEventListener('click', () => {
             if (navigator.share) {
                 navigator.share({
-                    title: 'BANGKOK NIGHTS MIXTAPE',
-                    text: '8R, RAF, SPA, Kratom, ATM, 7/11, Asok, Condo, Veed — новый микстейп',
+                    title: '8R - Buddhahood Mixtape',
+                    text: 'Новый микстейп 8R: RAF, SPA, Kratom, ATM, 7/11, Asok, Condo, Veed',
                     url: window.location.href,
-                }).catch(() => showToast('Ссылка скопирована в буфер?', 'info'));
+                }).catch(() => showToast('Ссылка готова для шаринга', 'info'));
             } else {
-                // fallback
                 navigator.clipboard.writeText(window.location.href).then(() => {
                     showToast('🔗 Ссылка на промо скопирована!', 'info');
-                }).catch(() => showToast('Поделитесь URL вручную', 'info'));
+                }).catch(() => showToast('Поделитесь вручную', 'info'));
             }
         });
     }
 
-    // добавим лёгкий эффект при клике на трек строку, но не на иконку
+    // по клику на строку трека (не на иконку) - уведомление
     trackItems.forEach(item => {
         item.addEventListener('click', (e) => {
-            // если клик не по иконке плей
             if (!e.target.closest('.play-icon')) {
                 const title = item.querySelector('.track-title')?.innerText || 'трек';
-                showToast(`Выбран трек: ${title} (нажмите ▶ для прослушивания)`, 'info');
+                showToast(`🎵 Трек "${title}" — 8R (нажмите ▶ для прослушивания)`, 'info');
             }
         });
     });
     
-    // динамический эффект градиента обложки (легкое вращение)
+    // динамическое мерцание обложки
     const coverGlow = document.querySelector('.cover-glow');
     if (coverGlow) {
-        let angle = 0;
         setInterval(() => {
-            angle = (angle + 1) % 360;
-            coverGlow.style.background = `radial-gradient(ellipse at 30% 40%, rgba(0, 255, 200, 0.12), transparent 70%)`;
+            coverGlow.style.background = `radial-gradient(ellipse at 30% 40%, rgba(255, 199, 69, 0.18), transparent 70%)`;
+            setTimeout(() => {
+                coverGlow.style.background = `radial-gradient(ellipse at 30% 40%, rgba(255, 180, 60, 0.1), transparent 70%)`;
+            }, 1500);
         }, 3000);
     }
 
-    // дополнительно - обработка для кнопок трека чтобы улучшить доступность
-    console.log('Промо-страница микстейпа загружена: 8R, RAF, SPA, Kratom, ATM, 7/11, Asok, Condo, Veed');
+    console.log('Buddhahood — промо страница готова. Исполнитель: 8R, треки: RAF, SPA, Kratom, ATM, 7/11, Asok, Condo, Veed');
 </script>
 </body>
 </html>
